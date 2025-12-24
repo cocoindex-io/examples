@@ -2,7 +2,7 @@
     <img src="https://cocoindex.io/images/github.svg" alt="CocoIndex">
 </p>
 
-<h2 align="center">📖 Documentation https://cocoindex.io/docs </h2>
+<h2 align="center">📖 Examples Documentation https://cocoindex.io/examples </h2>
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 
 
-This directory is the source code for the CocoIndex documentation website, built using [Docusaurus](https://docusaurus.io/).
+This directory is the source code for the CocoIndex examples documentation website, built using [Docusaurus](https://docusaurus.io/).
 
 ### Installation
 
