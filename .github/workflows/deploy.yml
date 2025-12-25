@@ -3,8 +3,6 @@ name: Deploy Examples
 on:
   push:
     branches: [main]
-    paths:
-      - 'examples/**'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages-examples"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
@@ -24,9 +22,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Detect package manager
         id: detect-package-manager
-        working-directory: ./examples
         run: |
-          if [ -f "${{ github.workspace }}/examples/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
@@ -39,19 +36,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: examples/**/yarn.lock
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
-        working-directory: ./examples
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build website
-        working-directory: ./examples
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./examples/build
+          path: ./build
 
   deploy:
     environment:
@@ -62,5 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-
+        uses: actions/deploy-pages@v4 
