@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'CocoIndex Examples',
-  tagline: 'Examples of using CocoIndex',
+  title: 'CocoIndex',
+  tagline: 'Indexing infra for AI with exceptional velocity',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
