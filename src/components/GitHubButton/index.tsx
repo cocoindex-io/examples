@@ -15,6 +15,7 @@ function Button({ href, children, margin = '0' }: ButtonProps): ReactNode {
         target='_blank'
         rel='noopener noreferrer'
         className='button-interactive'
+        style={{ margin }}
     >
         {children}
         </a>

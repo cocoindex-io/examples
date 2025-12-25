@@ -227,7 +227,6 @@
   border-radius: var(--ifm-button-border-radius, 4px);
   color: var(--ifm-color-primary);
   background: transparent;
-  transition: background-color 150ms ease, color 150ms ease;
 }
 
 .button-interactive:hover,
@@ -235,6 +234,7 @@
 .button-interactive:focus{
   color: #fff;
   background-color: var(--ifm-color-primary);
+  text-decoration: none;
 }
 
 .button-interactive:focus-visible{
