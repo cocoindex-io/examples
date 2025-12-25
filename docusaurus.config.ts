@@ -81,14 +81,14 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/social-card.jpg',
-    metadata: [{ name: 'description', content: 'CocoIndex Examples - Learn from practical examples and integrations for building data indexing pipelines with CocoIndex.' }],
+    metadata: [{ name: 'description', content: 'CocoIndex - practical examples' }],
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'CocoIndex Examples',
+      title: 'CocoIndex',
       logo: {
         alt: 'CocoIndex Logo',
         src: 'img/icon.svg',
