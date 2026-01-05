@@ -16,7 +16,6 @@ import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/comp
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/code_embedding" margin="0 0 24px 0" />
 <YouTubeButton url="https://youtu.be/G3WstvhHO24?si=ndYfM0XRs03_hVPR" margin="0 0 24px 0" />
 
-![Codebase Index](/img/examples/codebase_index/cover.png)
 
 ## Overview
 
@@ -25,6 +24,8 @@ In this tutorial, we will build codebase index. [CocoIndex](https://github.com/c
 ## Use Cases
 
 A wide range of applications can be built with an effective codebase index that is always up-to-date.
+
+![Codebase Index Use Cases](/img/examples/codebase_index/usecase.png)
 
 - Semantic code context for AI coding agents like Claude, Codex, Gemini CLI.
 - MCP for code editors such as Cursor, Windsurf, and VSCode.
