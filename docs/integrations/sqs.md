@@ -131,7 +131,7 @@ This defines a flow that reads text files from the Amazon S3 bucket.
 
 ### Rest of the flow
 For the rest of the flow, we can follow the tutorial
-[Simple Vector Index](https://cocoindex.io/docs/examples/simple_vector_index).
+[Simple Vector Index](https://cocoindex.io/examples/simple_vector_index).
 The entire project is available [here](https://github.com/cocoindex-io/cocoindex/tree/main/examples/amazon_s3_embedding).
 
 ## Run the flow with live update

@@ -303,7 +303,7 @@ This flow gives you **multimodal recall**, meaning you can:
 - Build next-generation retrieval systems across rich content formats
 
 ## Compare with ColPali Vision Model (OCR Free)
-We also have an [example for ColPali](https://cocoindex.io/docs/examples/image_search)
+We also have an [example for ColPali](https://cocoindex.io/examples/image_search)
 
 To compare two approaches:
 

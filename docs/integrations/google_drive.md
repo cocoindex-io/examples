@@ -168,7 +168,7 @@ def gdrive_text_embedding_flow(flow_builder: cocoindex.FlowBuilder, data_scope: 
 
 ### Rest of the flow
 For the rest of the flow, we can follow the tutorial
-[Simple Vector Index](https://cocoindex.io/docs/examples/simple_vector_index).
+[Simple Vector Index](https://cocoindex.io/examples/simple_vector_index).
 The entire project is available [here](https://github.com/cocoindex-io/cocoindex/tree/main/examples/gdrive_text_embedding).
 
 

@@ -150,7 +150,7 @@ After this step, you should have the first page of each paper in Markdown format
 ### Extract basic info with LLM
 
 Define a schema for LLM extraction. CocoIndex natively supports LLM-structured extraction with complex and nested schemas.
-If you are interested in learning more about nested schemas, refer to [this example](https://cocoindex.io/docs/examples/patient_form_extraction).
+If you are interested in learning more about nested schemas, refer to [this example](https://cocoindex.io/examples/patient_form_extraction).
 
 ```python
 @dataclasses.dataclass
