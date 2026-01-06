@@ -463,7 +463,7 @@ class Topic:
     topic: str
 ```
 
-This dataclass defines a **Topic**, representing a single normalized concept extracted from text—such as a product, technology, company, person, or domain. It provides a prompt for the LLM to extract topics into structured information. Here we used a simple string. You could also generate [knowledge graphs](https://cocoindex.io/docs/examples/knowledge-graph-for-docs), or use it to extract other information too.
+This dataclass defines a **Topic**, representing a single normalized concept extracted from text—such as a product, technology, company, person, or domain. It provides a prompt for the LLM to extract topics into structured information. Here we used a simple string. You could also generate [knowledge graphs](https://cocoindex.io/examples/knowledge-graph-for-docs), or use it to extract other information too.
 
 
 #### Process Each Thread and Use LLM for Extraction

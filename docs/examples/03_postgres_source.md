@@ -289,7 +289,7 @@ if __name__ == "__main__":
 
 ### Run as a Service
 
-This [example](https://cocoindex.io/docs/examples/image_search#fast-api-application) runs as a service using Fast API.
+This [example](https://cocoindex.io/examples/image_search#fast-api-application) runs as a service using Fast API.
 
 ## Why One Framework for Structured + Unstructured?
 

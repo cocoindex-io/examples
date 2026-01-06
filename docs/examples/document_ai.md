@@ -148,7 +148,7 @@ doc_embeddings.export(
 
 For a step-by-step walkthrough of each indexing stage and the query path, check out this example:
 
-<ExampleButton href="https://cocoindex.io/docs/examples/simple_vector_index" text="Simple Vector Index" margin="0 0 16px 0" />
+<ExampleButton href="https://cocoindex.io/examples/simple_vector_index" text="Simple Vector Index" margin="0 0 16px 0" />
 
 ## Other sources
 
