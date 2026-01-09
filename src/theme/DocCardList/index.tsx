@@ -4,6 +4,16 @@ import { useCurrentSidebarCategory } from '@docusaurus/plugin-content-docs/clien
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import DocCard from '@theme/DocCard';
 import type { Props } from '@theme/DocCardList';
+import { RadioCards } from '@site/src/components/RadioCards';
+import { 
+  FaDatabase, 
+  FaProjectDiagram, 
+  FaImages, 
+  FaTable, 
+  FaCubes, 
+  FaMap,
+  FaThLarge 
+} from 'react-icons/fa';
 import styles from './styles.module.css';
 
 // List of tags as requested
@@ -15,6 +25,16 @@ const TAGS = [
   'custom-building-blocks',
   'data-mapping'
 ];
+
+// Icon mapping for each tag
+const TAG_ICONS: Record<string, ReactNode> = {
+  'vector-index': <FaDatabase />,
+  'knowledge-graph': <FaProjectDiagram />,
+  'multi-modal': <FaImages />,
+  'structured-data-extraction': <FaTable />,
+  'custom-building-blocks': <FaCubes />,
+  'data-mapping': <FaMap />,
+};
 
 export default function DocCardList(props: Props): ReactNode {
   const { items, className } = props;
@@ -35,42 +55,37 @@ export default function DocCardList(props: Props): ReactNode {
     )
     : items;
 
+  // Handle value change - convert "" to null for "All Categories"
+  const handleValueChange = (value: string) => {
+    setSelectedTag(value === '' ? null : value);
+  };
+
+  // Convert selectedTag to string for RadioCards (null becomes "")
+  const radioValue = selectedTag === null ? '' : selectedTag;
+
   return (
     <>
       <div className={styles.tagSelectorContainer}>
-        <div className={styles.tagSelectorGrid}>
-          <div className={styles.tagOption}>
-            <input
-              type="radio"
-              id="tag-all"
-              name="doccard-tag-filter"
-              value=""
-              checked={selectedTag === null}
-              onChange={() => setSelectedTag(null)}
-              className={styles.allTagsRadio}
-            />
-            <label htmlFor="tag-all" className={styles.allTagsLabel}>
-              All Categories
-            </label>
-          </div>
+        <RadioCards.Root
+          value={radioValue}
+          onValueChange={handleValueChange}
+          defaultValue=""
+          columns={{ initial: "1", sm: "2", md: "3" }}
+          gap="2"
+          size="1"
+          variant="surface"
+        >
+          <RadioCards.Item value="">
+            <FaThLarge />
+            All Categories
+          </RadioCards.Item>
           {TAGS.map((tag) => (
-            <div key={tag} className={styles.tagOption}>
-              <input
-                type="radio"
-                id={`tag-${tag}`}
-                name="doccard-tag-filter"
-                value={tag}
-                checked={selectedTag === tag}
-                onChange={() => setSelectedTag(tag)}
-                className={styles.tagRadio}
-              />
-              <label htmlFor={`tag-${tag}`} className={styles.tagLabel}>
-                {tag.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-              </label>
-            </div>
+            <RadioCards.Item key={tag} value={tag}>
+              {TAG_ICONS[tag]}
+              {tag.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+            </RadioCards.Item>
           ))}
-
-        </div>
+        </RadioCards.Root>
       </div>
       <section className={clsx('row', className)}>
         <BrowserOnly>
