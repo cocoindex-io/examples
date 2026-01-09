@@ -20,6 +20,7 @@ import { LastReviewed } from '@site/src/components/LastReviewed';
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/code_embedding" margin="0 0 24px 0" />
 <YouTubeButton url="https://youtu.be/G3WstvhHO24?si=ndYfM0XRs03_hVPR" margin="0 0 24px 0" />
 
+![Codebase Index](/img/examples/codebase_index/cover.png)
 
 ## Overview
 
