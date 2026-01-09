@@ -527,33 +527,33 @@
   border-color: var(--radix-yellow-8);
 }
 
-/* Radius */
-.radius-none {
-  border-radius: 0;
-}
-
-.radius-small {
-  border-radius: 0.25rem;
-}
-
-.radius-medium {
-  border-radius: 0.375rem;
-}
-
-.radius-large {
-  border-radius: 0.5rem;
-}
-
-.radius-full {
-  border-radius: 9999px;
-}
-
 /* Default radius for variants */
 .variant-solid,
 .variant-soft,
 .variant-surface,
 .variant-outline {
   border-radius: 0.375rem;
+}
+
+/* Radius - must come after variant defaults to override */
+.radius-none {
+  border-radius: 0 !important;
+}
+
+.radius-small {
+  border-radius: 0.25rem !important;
+}
+
+.radius-medium {
+  border-radius: 0.375rem !important;
+}
+
+.radius-large {
+  border-radius: 0.5rem !important;
+}
+
+.radius-full {
+  border-radius: 9999px !important;
 }
 
 /* Dark mode support */
