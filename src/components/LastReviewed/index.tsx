@@ -44,8 +44,8 @@ function LastReviewed({ date, margin = '0 0 24px 0' }: LastReviewedProps): React
             gap: '8px', 
             margin
         }}>
-            <FaCheckCircle style={{ color: '#22c55e' }} />
-            <span style={{ color: 'black' }}>
+            <FaCheckCircle style={{ color: 'var(--radix-green)' }} />
+            <span style={{ color: 'var(--my-color-text-black)' }}>
                 Last reviewed:{' '}
                 <time dateTime={isoDate} itemProp="dateModified">
                     {displayDate}
