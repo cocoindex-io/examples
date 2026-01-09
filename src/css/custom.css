@@ -34,9 +34,6 @@
   --theme-color-text-default: #111827;
   --theme-color-keyline: #e5e7eb;
 
-  /* Radix UI green colors */
-  --radix-green: #22c55e;
-  --radix-green-dark: #16a34a;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

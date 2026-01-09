@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import './styles.module.css';
 
 type LastReviewedProps = {
     date?: string;
@@ -44,8 +45,8 @@ function LastReviewed({ date, margin = '0 0 24px 0' }: LastReviewedProps): React
             gap: '8px', 
             margin
         }}>
-            <FaCheckCircle style={{ color: 'var(--radix-green)' }} />
-            <span style={{ color: 'var(--my-color-text-black)' }}>
+            <FaCheckCircle style={{ color: 'var(--radix-green-9)' }} />
+            <span style={{ color: 'var(--radix-color-text)' }}>
                 Last reviewed:{' '}
                 <time dateTime={isoDate} itemProp="dateModified">
                     {displayDate}
