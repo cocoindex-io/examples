@@ -13,7 +13,7 @@ authors: [linghua]
 last_reviewed: 2026-01-09
 ---
 
-import { DocumentationButton, GitHubButton } from '@site/src/components/GitHubButton';
+import { DocumentationButton, GitHubButton } from '@site/src/components/ActionButtons';
 import { LastReviewed } from '@site/src/components/LastReviewed';
 
 <LastReviewed date={frontMatter.last_reviewed} />

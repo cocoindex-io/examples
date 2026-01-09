@@ -10,7 +10,7 @@ sidebar_custom_props:
 image: /img/integrations/google_drive/cover.png
 last_reviewed: 2026-01-09
 ---
-import { DocumentationButton, GitHubButton } from '@site/src/components/GitHubButton';
+import { DocumentationButton, GitHubButton } from '@site/src/components/ActionButtons';
 import { LastReviewed } from '@site/src/components/LastReviewed';
 
 <LastReviewed date={frontMatter.last_reviewed} />

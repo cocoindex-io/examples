@@ -11,7 +11,7 @@ image: /img/examples/postgres_source/cover.png
 tags: [data-mapping, vector-index]
 last_reviewed: 2026-01-09
 ---
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/ActionButtons';
 import { LastReviewed } from '@site/src/components/LastReviewed';
 
 <LastReviewed date={frontMatter.last_reviewed} />
