@@ -12,7 +12,9 @@ tags: [custom-building-blocks, structured-data-extraction]
 authors: [linghua]
 ---
 
-import { DocumentationButton, GitHubButton } from '@site/src/components/GitHubButton';
+import { DocumentationButton, GitHubButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/hn_trending_topics" margin="0 0 24px 0" />
 

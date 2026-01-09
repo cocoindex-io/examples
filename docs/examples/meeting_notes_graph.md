@@ -11,7 +11,9 @@ image: /img/examples/meeting_notes_graph/cover.png
 tags: [knowledge-graph, structured-data-extraction]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/meeting_notes_graph" margin="0 0 24px 0" />
 

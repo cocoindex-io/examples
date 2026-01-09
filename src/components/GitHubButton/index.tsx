@@ -82,3 +82,4 @@ function ExampleButton({ href, text, margin }: ExampleButtonProps): ReactNode {
 }
 
 export { GitHubButton, YouTubeButton, DocumentationButton, ExampleButton };
+export { LastReviewed } from './LastReviewed';

@@ -10,8 +10,9 @@ sidebar_custom_props:
 image: /img/examples/document_ai/cover.png
 tags: [vector-index, custom-building-blocks]
 ---
-import { GitHubButton, DocumentationButton, ExampleButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, DocumentationButton, ExampleButton, LastReviewed } from '@site/src/components/GitHubButton';
 
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex-etl-with-document-ai" margin="0 0 24px 0" />
 

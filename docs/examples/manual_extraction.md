@@ -11,7 +11,9 @@ image: /img/examples/manual_extraction/cover.png
 tags: [structured-data-extraction, data-mapping]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/manuals_llm_extraction" margin="0 0 24px 0" />
 

@@ -11,7 +11,9 @@ image: /img/examples/product_recommendation/cover.png
 tags: [knowledge-graph]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/product_recommendation" margin="0 0 24px 0" />
 

@@ -12,7 +12,9 @@ tags: [custom-building-blocks]
 authors: [linghua]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/custom_source_hn" margin="0 0 24px 0" />
 

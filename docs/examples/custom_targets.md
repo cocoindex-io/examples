@@ -10,7 +10,9 @@ sidebar_custom_props:
 image: /img/examples/custom_targets/cover.png
 tags: [custom-building-blocks]
 ---
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/custom_output_files" margin="0 0 24px 0" />
 

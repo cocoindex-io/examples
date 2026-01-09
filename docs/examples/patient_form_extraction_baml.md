@@ -11,7 +11,9 @@ image: /img/examples/patient_form_extraction_baml/cover.png
 tags: [structured-data-extraction, custom-building-blocks]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/patient_intake_extraction_baml" margin="0 0 24px 0" />
 

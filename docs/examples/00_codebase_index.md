@@ -11,7 +11,9 @@ image: /img/examples/codebase_index/cover.png
 tags: [vector-index, codebase]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/code_embedding" margin="0 0 24px 0" />
 <YouTubeButton url="https://youtu.be/G3WstvhHO24?si=ndYfM0XRs03_hVPR" margin="0 0 24px 0" />

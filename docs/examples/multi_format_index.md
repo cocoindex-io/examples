@@ -11,7 +11,9 @@ image: /img/examples/multi_format_index/cover.png
 tags: [vector-index, multi-modal]
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+
+<LastReviewed />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/multi_format_indexing" margin="0 0 24px 0" />
 
