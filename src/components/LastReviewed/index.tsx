@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import './styles.module.css';
 
 type LastReviewedProps = {
     date?: string;
