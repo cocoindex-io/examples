@@ -8,8 +8,12 @@ sidebar_custom_props:
   image: /img/integrations/google_drive/cover.png
   tags: [vector-index, google-drive, realtime, etl]
 image: /img/integrations/google_drive/cover.png
+last_reviewed: January 15, 2025
 ---
 import { DocumentationButton, GitHubButton } from '@site/src/components/GitHubButton';
+import { LastReviewed } from '@site/src/components/LastReviewed';
+
+<LastReviewed date={frontMatter.last_reviewed} />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/gdrive_text_embedding" margin="0 0 24px 0" />
 

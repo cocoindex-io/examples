@@ -9,11 +9,13 @@ sidebar_custom_props:
   tags: [vector-index, multi-modal]
 image: /img/examples/image_search_clip/cover.png
 tags: [vector-index, multi-modal]
+last_reviewed: January 15, 2025
 ---
 
-import { GitHubButton, YouTubeButton, DocumentationButton, LastReviewed } from '@site/src/components/GitHubButton';
+import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { LastReviewed } from '@site/src/components/LastReviewed';
 
-<LastReviewed />
+<LastReviewed date={frontMatter.last_reviewed} />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/blob/main/examples/image_search/main.py" margin="0 0 24px 0" />
 
