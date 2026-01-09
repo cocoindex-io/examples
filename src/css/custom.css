@@ -7,6 +7,9 @@
 /* Import Questrial font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* Import Radix UI color system */
+@import '../components/Color/colors.css';
+
 /* You can override the default Infima variables here. */
 :root {
   /* Iris color scheme from Radix UI */
@@ -34,9 +37,9 @@
   --theme-color-text-default: #111827;
   --theme-color-keyline: #e5e7eb;
 
-  /* Radix UI green colors */
-  --radix-green: #22c55e;
-  --radix-green-dark: #16a34a;
+  /* Radix UI green colors - using centralized color system */
+  --radix-green: var(--radix-green-9);
+  --radix-green-dark: var(--radix-green-10);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
