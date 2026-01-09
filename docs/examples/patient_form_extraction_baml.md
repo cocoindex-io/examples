@@ -9,9 +9,13 @@ sidebar_custom_props:
   tags: [structured-data-extraction, custom-building-blocks ]
 image: /img/examples/patient_form_extraction_baml/cover.png
 tags: [structured-data-extraction, custom-building-blocks]
+last_reviewed: 2026-01-09
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { LastReviewed } from '@site/src/components/LastReviewed';
+
+<LastReviewed date={frontMatter.last_reviewed} />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/patient_intake_extraction_baml" margin="0 0 24px 0" />
 

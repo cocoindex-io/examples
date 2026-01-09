@@ -9,9 +9,13 @@ sidebar_custom_props:
   tags: [knowledge-graph, structured-data-extraction]
 image: /img/examples/meeting_notes_graph/cover.png
 tags: [knowledge-graph, structured-data-extraction]
+last_reviewed: 2026-01-09
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
+import { LastReviewed } from '@site/src/components/LastReviewed';
+
+<LastReviewed date={frontMatter.last_reviewed} />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/meeting_notes_graph" margin="0 0 24px 0" />
 

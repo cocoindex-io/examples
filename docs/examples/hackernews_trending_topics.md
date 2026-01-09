@@ -10,9 +10,13 @@ sidebar_custom_props:
 image: /img/examples/hackernews-trending-topics/cover.png
 tags: [custom-building-blocks, structured-data-extraction]
 authors: [linghua]
+last_reviewed: 2026-01-09
 ---
 
 import { DocumentationButton, GitHubButton } from '@site/src/components/GitHubButton';
+import { LastReviewed } from '@site/src/components/LastReviewed';
+
+<LastReviewed date={frontMatter.last_reviewed} />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex/tree/main/examples/hn_trending_topics" margin="0 0 24px 0" />
 

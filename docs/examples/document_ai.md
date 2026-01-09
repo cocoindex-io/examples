@@ -9,9 +9,12 @@ sidebar_custom_props:
   tags: [vector-index, custom-building-blocks]
 image: /img/examples/document_ai/cover.png
 tags: [vector-index, custom-building-blocks]
+last_reviewed: 2026-01-09
 ---
 import { GitHubButton, DocumentationButton, ExampleButton } from '@site/src/components/GitHubButton';
+import { LastReviewed } from '@site/src/components/LastReviewed';
 
+<LastReviewed date={frontMatter.last_reviewed} />
 
 <GitHubButton url="https://github.com/cocoindex-io/cocoindex-etl-with-document-ai" margin="0 0 24px 0" />
 
