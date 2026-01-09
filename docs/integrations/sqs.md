@@ -11,7 +11,7 @@ image: /img/integrations/sqs/cover.png
 tags: [vector-index, s3, sqs, realtime, etl]
 last_reviewed: 2026-01-09
 ---
-import { DocumentationButton } from '@site/src/components/GitHubButton';
+import { DocumentationButton } from '@site/src/components/ActionButtons';
 import { LastReviewed } from '@site/src/components/LastReviewed';
 
 <LastReviewed date={frontMatter.last_reviewed} />
