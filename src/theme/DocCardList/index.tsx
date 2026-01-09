@@ -70,7 +70,7 @@ export default function DocCardList(props: Props): ReactNode {
           value={radioValue}
           onValueChange={handleValueChange}
           defaultValue=""
-          columns={{ initial: "1", sm: "2", md: "3" }}
+          columns={{ initial: "2", md: "3" }}
           gap="2"
           size="1"
           variant="surface"
