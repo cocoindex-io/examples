@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [structured-data-extraction, custom-building-blocks, vision-models]
 image: /img/examples/patient_form_extraction_dspy/cover.png
 tags: [structured-data-extraction, custom-building-blocks, vision-models]
-last_reviewed: 2025-01-15
+last_reviewed: 2026-01-09
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';

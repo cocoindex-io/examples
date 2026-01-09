@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [structured-data-extraction, custom-building-blocks ]
 image: /img/examples/patient_form_extraction_baml/cover.png
 tags: [structured-data-extraction, custom-building-blocks]
-last_reviewed: 2025-01-15
+last_reviewed: 2026-01-09
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';

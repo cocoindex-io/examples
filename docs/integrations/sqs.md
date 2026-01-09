@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [vector-index, s3, sqs, realtime, etl]
 image: /img/integrations/sqs/cover.png
 tags: [vector-index, s3, sqs, realtime, etl]
-last_reviewed: 2025-01-15
+last_reviewed: 2026-01-09
 ---
 import { DocumentationButton } from '@site/src/components/GitHubButton';
 import { LastReviewed } from '@site/src/components/LastReviewed';
