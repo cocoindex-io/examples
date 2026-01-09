@@ -44,17 +44,3 @@
   gap: 0.4rem;
   margin-top: 0.75rem;
 }
-
-.cardTag {
-  padding: 0.18rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  background: var(--ifm-background-color);
-  color: var(--ifm-color-emphasis-700);
-  transition:
-    background 0.15s,
-    border-color 0.15s,
-    color 0.15s;
-}

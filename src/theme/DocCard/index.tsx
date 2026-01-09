@@ -6,6 +6,7 @@ import type { Props } from '@theme/DocCard';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { Badge } from '@site/src/components/Badge';
 
 function CardLayout({
   href,
@@ -41,9 +42,9 @@ function CardLayout({
         {tags && tags.length > 0 && (
           <div className={styles.cardTags}>
             {tags.map((tag, index) => (
-              <span key={index} className={styles.cardTag}>
+              <Badge key={index} variant="outline" color="gray" size="2" radius="full">
                 {tag}
-              </span>
+              </Badge>
             ))}
           </div>
         )}
