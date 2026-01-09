@@ -10,7 +10,7 @@ sidebar_custom_props:
 image: /img/examples/custom_source_hackernews/cover.png
 tags: [custom-building-blocks]
 authors: [linghua]
-last_reviewed: January 15, 2025
+last_reviewed: 2025-01-15
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';

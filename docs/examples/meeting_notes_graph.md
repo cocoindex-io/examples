@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [knowledge-graph, structured-data-extraction]
 image: /img/examples/meeting_notes_graph/cover.png
 tags: [knowledge-graph, structured-data-extraction]
-last_reviewed: January 15, 2025
+last_reviewed: 2025-01-15
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';

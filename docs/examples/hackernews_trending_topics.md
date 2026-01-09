@@ -10,7 +10,7 @@ sidebar_custom_props:
 image: /img/examples/hackernews-trending-topics/cover.png
 tags: [custom-building-blocks, structured-data-extraction]
 authors: [linghua]
-last_reviewed: January 15, 2025
+last_reviewed: 2025-01-15
 ---
 
 import { DocumentationButton, GitHubButton } from '@site/src/components/GitHubButton';

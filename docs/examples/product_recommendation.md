@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [knowledge-graph ]
 image: /img/examples/product_recommendation/cover.png
 tags: [knowledge-graph]
-last_reviewed: January 15, 2025
+last_reviewed: 2025-01-15
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';

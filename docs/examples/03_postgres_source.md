@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [data-mapping, vector-index]
 image: /img/examples/postgres_source/cover.png
 tags: [data-mapping, vector-index]
-last_reviewed: January 15, 2025
+last_reviewed: 2025-01-15
 ---
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/GitHubButton';
 import { LastReviewed } from '@site/src/components/LastReviewed';
