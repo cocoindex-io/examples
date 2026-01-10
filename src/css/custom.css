@@ -7,6 +7,9 @@
 /* Import Questrial font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* Import custom scrollbar styles */
+@import './scrollbar.css';
+
 /* You can override the default Infima variables here. */
 :root {
   /* Iris color scheme from Radix UI */
