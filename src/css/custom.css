@@ -52,7 +52,7 @@
   /* Dark mode specific colors */
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-background-color: #111827;
-  --ifm-footer-background-color: #111827;
+  --ifm-footer-background-color: var(--ifm-background-color); 
   --ifm-menu-color: #f3f4f6;
   --ifm-toc-link-color: #f3f4f6;
 
