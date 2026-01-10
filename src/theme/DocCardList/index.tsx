@@ -87,13 +87,13 @@ export default function DocCardList(props: Props): ReactNode {
           ))}
         </RadioCards.Root>
       </div>
-      <section className={clsx('row', className)}>
+      <section className={clsx(styles.cardGrid, className)}>
         <BrowserOnly>
           {() => {
             return filteredItems.map((item, index) => (
-              <article key={index} className="col col--6 margin-bottom--lg">
+              <div key={index} className={styles.cardItem}>
                 <DocCard item={item} />
-              </article>
+              </div>
             ));
           }}
         </BrowserOnly>

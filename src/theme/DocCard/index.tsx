@@ -1,12 +1,7 @@
 import React, { type ReactNode } from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import { useDocById } from '@docusaurus/plugin-content-docs/client';
 import type { Props } from '@theme/DocCard';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Badge } from '@site/src/components/Badge';
+import { ImageCard } from '@site/src/components/ImageCard';
 
 function CardLayout({
   href,
@@ -21,35 +16,19 @@ function CardLayout({
   description?: string;
   tags?: string[];
 }): ReactNode {
+  // ImageCard requires an image, so return null if no image
+  if (!image) {
+    return null;
+  }
+
   return (
-    <Link href={href} className={clsx('card padding--lg', styles.cardContainer)} style={{ height: '100%' }}>
-      <div>
-        {image && (
-          <div className={styles.cardImageWrapper}>
-            <img src={useBaseUrl(image)} alt={title} className={styles.cardImage} />
-          </div>
-        )}
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <Heading as="h2" className={clsx('', styles.cardTitle)} title={title}>
-            {title}
-          </Heading>
-        </div>
-        {description && (
-          <p className={clsx(styles.cardDescription)} title={description}>
-            {description}
-          </p>
-        )}
-        {tags && tags.length > 0 && (
-          <div className={styles.cardTags}>
-            {tags.map((tag, index) => (
-              <Badge key={index} variant="outline" color="gray" size="2" radius="full">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        )}
-      </div>
-    </Link>
+    <ImageCard
+      link={href}
+      imageLink={image}
+      title={title}
+      content={description}
+      tags={tags}
+    />
   );
 }
 

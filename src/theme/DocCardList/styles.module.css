@@ -3,6 +3,34 @@
   padding: 0.5rem 0;
 }
 
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardItem > * {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Responsive: single column on mobile */
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .tagSelectorGrid {
   display: flex;
   flex-wrap: wrap;
