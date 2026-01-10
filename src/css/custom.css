@@ -10,6 +10,12 @@
 /* Import custom scrollbar styles */
 @import './scrollbar.css';
 
+/* Import sidebar styles */
+@import './sidebar.css';
+
+/* Import Radix UI color system */
+@import '../components/Color/colors.css';
+
 /* You can override the default Infima variables here. */
 :root {
   /* Iris color scheme from Radix UI */
@@ -135,50 +141,6 @@
   font-family: 'Questrial', sans-serif;
 }
 
-
-
-.footer {
-  padding: 4rem 2rem;
-  border-top: 1px solid var(--ifm-color-emphasis-100);
-}
-
-.footer__title {
-  font-family: 'Questrial', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--my-color-text-black);
-}
-
-.footer__item {
-  font-family: 'Questrial', sans-serif;
-  font-size: 0.9rem;
-  padding: 0.25rem 0;
-}
-
-.footer__copyright {
-  font-family: 'Questrial', sans-serif;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-  text-align: left;
-  color: var(--ifm-color-emphasis-600);
-}
-
-.footer__link-item {
-  color: var(--ifm-color-emphasis-700);
-  line-height: 2;
-}
-
-.footer__link-item:hover {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-
-.theme-doc-sidebar-menu {
-  font-size: 0.875rem;
-  /* 14px */
-}
-
 .table-of-contents {
   font-size: 0.8125rem;
   /* 13px */
@@ -199,12 +161,6 @@
     padding: 0;
     background: none;
   }
-}
-
-/* Sidebar caret styles */
-.menu__caret:before,
-.menu__link--sublist-caret:after {
-  background: var(--ifm-menu-link-sublist-icon) 50% / 1rem 1rem;
 }
 
 .navbar__item.navbar-github-link {
