@@ -186,6 +186,14 @@ a.button:visited {
   color: var(--radix-gray-11);
 }
 
+.color-gray.variant-soft:hover:not(:disabled) {
+  background-color: var(--radix-gray-4);
+}
+
+.color-gray.variant-soft:active:not(:disabled) {
+  background-color: var(--radix-gray-5);
+}
+
 .color-indigo.variant-solid {
   background-color: var(--radix-indigo-9);
 }
@@ -426,5 +434,19 @@ a.button:visited {
 
 [data-theme='dark'] .variant-ghost:active:not(:disabled) {
   background-color: var(--radix-gray-5);
+}
+
+/* Dark mode gray button support */
+[data-theme='dark'] .color-gray.variant-soft {
+  background-color: var(--radix-gray-5);
+  color: var(--radix-gray-11);
+}
+
+[data-theme='dark'] .color-gray.variant-soft:hover:not(:disabled) {
+  background-color: var(--radix-gray-6);
+}
+
+[data-theme='dark'] .color-gray.variant-soft:active:not(:disabled) {
+  background-color: var(--radix-gray-7);
 }
 
