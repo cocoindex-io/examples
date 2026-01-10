@@ -12,6 +12,7 @@ export type ImageCardProps = {
   imageLink: string;
   title: string;
   content?: string;
+  metadata?: string;
   tag?: string;
   tags?: string[];
   className?: string;
@@ -23,6 +24,7 @@ export function ImageCard({
   imageLink,
   title,
   content,
+  metadata,
   tag,
   tags,
   className,
@@ -47,7 +49,12 @@ export function ImageCard({
               style={imageStyle}
             />
           </Inset>
-          <div style={{ display: 'flex', flexDirection: 'row', marginTop: '1rem' }}>
+          {metadata && (
+            <div style={{ fontSize: '0.75rem', color: 'var(--radix-color-text-subtle)', marginTop: '1rem', marginBottom: '0.25rem' }}>
+              {metadata}
+            </div>
+          )}
+          <div style={{ display: 'flex', flexDirection: 'row', marginTop: metadata ? '0.5rem' : '1rem' }}>
             <h2 style={{ fontSize: '1rem', marginTop: 0, marginBottom: 0 }}>
               {title}
             </h2>
