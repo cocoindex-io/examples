@@ -1,10 +1,10 @@
 import React, { type ReactNode, useState } from 'react';
 import clsx from 'clsx';
-import { useCurrentSidebarCategory } from '@docusaurus/plugin-content-docs/client';
+import { useCurrentSidebarCategory, useDocById } from '@docusaurus/plugin-content-docs/client';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import DocCard from '@theme/DocCard';
 import type { Props } from '@theme/DocCardList';
 import { RadioCards } from '@site/src/components/RadioCards';
+import { ImageCard } from '@site/src/components/ImageCard';
 import { 
   FaDatabase, 
   FaProjectDiagram, 
@@ -90,11 +90,31 @@ export default function DocCardList(props: Props): ReactNode {
       <section className={clsx(styles.cardGrid, className)}>
         <BrowserOnly>
           {() => {
-            return filteredItems.map((item, index) => (
-              <div key={index} className={styles.cardItem}>
-                <DocCard item={item} />
-              </div>
-            ));
+            return filteredItems.map((item, index) => {
+              if (item.type !== 'link') {
+                return null;
+              }
+
+              const image = typeof item?.customProps?.image === 'string' ? item.customProps.image : undefined;
+              if (!image) {
+                return null;
+              }
+
+              const doc = useDocById(item.docId ?? undefined);
+              const tags = (item?.customProps?.tags as string[]) || undefined;
+
+              return (
+                <div key={index} className={styles.cardItem}>
+                  <ImageCard
+                    link={item.href}
+                    imageLink={image}
+                    title={item.label}
+                    content={item.description ?? doc?.description}
+                    tags={tags}
+                  />
+                </div>
+              );
+            });
           }}
         </BrowserOnly>
       </section>
