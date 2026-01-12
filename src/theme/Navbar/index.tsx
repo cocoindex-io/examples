@@ -8,6 +8,7 @@ import SearchBar from '@theme/SearchBar';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import {FaBars} from 'react-icons/fa';
+import GitHubStar from '../../components/GitHubStar';
 import type {Props as NavbarItemConfig} from '@theme/NavbarItem';
 import styles from './styles.module.css';
 
@@ -49,7 +50,10 @@ export default function Navbar(): React.ReactElement {
           <div className={styles.navbarSearch}>
             <SearchBar />
           </div>
-          {rightItems.map((item, i) => <NavbarItem {...(item as NavbarItemConfig)} key={i} />)}
+          {rightItems.filter(item => item.type !== 'custom').map((item, i) => <NavbarItem {...(item as NavbarItemConfig)} key={i} />)}
+          <div className={styles.githubStarWrapper}>
+            <GitHubStar />
+          </div>
           <NavbarColorModeToggle className={styles.colorModeToggle} />
         </div>
       </div>

@@ -101,6 +101,11 @@
   flex-shrink: 0;
 }
 
+.githubStarWrapper {
+  display: flex;
+  align-items: center;
+}
+
 .navbarSearch {
   display: flex;
   align-items: center;
@@ -188,15 +193,4 @@
   }
 }
 
-/* Ensure GitHub iframe doesn't break layout */
-.navbarItemsRight :global(.navbar-github-link) {
-  display: block;
-  width: 120px;
-}
-
-@media (min-width: 769px) and (max-width: 996px) {
-  .navbarItemsRight :global(.navbar-github-link) {
-    margin-right: 0;
-  }
-}
 
