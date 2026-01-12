@@ -149,6 +149,10 @@
     display: none;
   }
 
+  .colorModeToggle {
+    display: none;
+  }
+
   .navbarMobileMenuButton {
     display: flex;
     order: -1;
@@ -183,8 +187,3 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navbarItemsRight :global(.navbar-github-link) {
-    display: none;
-  }
-}
