@@ -23,7 +23,7 @@ export default function Navbar(): React.ReactElement {
     <NavbarLayout>
       <div className={styles.navbarContainer}>
         <button
-          className={styles.navbarMobileMenuButton}
+          className={`${styles.navbarMobileMenuButton} ${mobileSidebar.shown ? styles.navbarMobileMenuButtonHidden : ''}`}
           onClick={mobileSidebar.toggle}
           aria-label="Toggle navigation bar"
           aria-expanded={mobileSidebar.shown}

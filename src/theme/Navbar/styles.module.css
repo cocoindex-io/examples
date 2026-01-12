@@ -156,7 +156,7 @@
   .navbarMobileMenuButton {
     display: flex;
     order: -1;
-    margin-right: 12px; /* Match cocoindex.io mr-3 (12px spacing) */
+    margin-right: 12px;
   }
 
   .navbarBrand {
@@ -172,6 +172,19 @@
 @media (min-width: 769px) and (max-width: 996px) {
   .navbarItemsRight {
     margin-right: 0;
+  }
+}
+
+/* Phone mode - show hamburger menu, but hide when sidebar is open */
+@media (max-width: 768px) {
+  .navbarMobileMenuButton {
+    display: flex;
+    order: -1;
+    margin-right: 12px;
+  }
+
+  .navbarMobileMenuButtonHidden {
+    display: none !important;
   }
 }
 
