@@ -1,0 +1,154 @@
+.navbar {
+  box-shadow: none;
+  border-bottom: none; /* Match cocoindex.io - no border */
+  background-color: var(--navbar-background-color);
+  font-size: 0.875rem; /* 14px */
+  height: auto;
+  min-height: var(--ifm-navbar-height);
+  position: sticky;
+  top: 0;
+  z-index: var(--ifm-z-index-fixed);
+  padding: 14px 0; /* Match cocoindex.io padding */
+}
+
+.navbarContainer {
+  width: 100%;
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-navbar-padding-horizontal);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.navbarLogoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.navbarLogoLink:hover {
+  opacity: 0.8;
+}
+
+.navbarLogo {
+  height: 24px;
+  line-height: 24px;
+  margin-right: 4px;
+}
+
+.navbarTitle {
+  font-size: 1.125rem; /* 18px */
+  color: var(--my-color-text-black);
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+}
+
+.navbarItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  font-family: 'Questrial', sans-serif;
+  font-size: 0.875rem; /* 14px */
+}
+
+.navbarItemsLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.navbarItemsRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbarSearch {
+  display: flex;
+  align-items: center;
+}
+
+.colorModeToggle {
+  display: flex;
+  align-items: center;
+}
+
+.navbarMobileMenuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 999;
+}
+
+.navbarMobileMenuIcon {
+  width: 100%;
+  height: 2px;
+  background-color: var(--ifm-color-content);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 996px) {
+  .navbarItemsLeft {
+    display: none;
+  }
+
+  .navbarSearch {
+    display: none;
+  }
+
+  .navbarMobileMenuButton {
+    display: flex;
+  }
+
+  .navbarItemsRight {
+    gap: 0.75rem;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 996px) {
+  .navbarItemsRight {
+    margin-right: 0;
+  }
+}
+
+/* Ensure GitHub iframe doesn't break layout */
+.navbarItemsRight :global(.navbar-github-link) {
+  display: block;
+  width: 120px;
+}
+
+@media (min-width: 769px) and (max-width: 996px) {
+  .navbarItemsRight :global(.navbar-github-link) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarItemsRight :global(.navbar-github-link) {
+    display: none;
+  }
+}
+
