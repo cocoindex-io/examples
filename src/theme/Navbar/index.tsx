@@ -50,7 +50,7 @@ export default function Navbar(): React.ReactElement {
           <div className={styles.navbarSearch}>
             <SearchBar />
           </div>
-          {rightItems.filter(item => item.type !== 'custom').map((item, i) => <NavbarItem {...(item as NavbarItemConfig)} key={i} />)}
+          {rightItems.map((item, i) => <NavbarItem {...(item as NavbarItemConfig)} key={i} />)}
           <div className={styles.githubStarWrapper}>
             <GitHubStar />
           </div>
