@@ -109,6 +109,7 @@ const config: Config = {
           position: 'left',
         },
         { to: 'https://cocoindex.io/blogs/', label: 'Blog', position: 'left', target: '_self' },
+        { to: 'https://cocoindex.io/enterprise', label: 'Enterprise', position: 'left', target: '_self' },
         {
           type: 'html',
           position: 'right',
