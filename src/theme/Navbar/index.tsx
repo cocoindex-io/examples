@@ -47,14 +47,14 @@ export default function Navbar(): React.ReactElement {
         </div>
 
         <div className={styles.navbarItemsRight}>
-          <div className={styles.navbarSearch}>
-            <SearchBar />
-          </div>
           {rightItems.map((item, i) => <NavbarItem {...(item as NavbarItemConfig)} key={i} />)}
           <div className={styles.githubStarWrapper}>
             <GitHubStar />
           </div>
           <NavbarColorModeToggle className={styles.colorModeToggle} />
+          <div className={styles.navbarSearch}>
+            <SearchBar />
+          </div>
         </div>
       </div>
     </NavbarLayout>
