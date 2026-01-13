@@ -140,6 +140,13 @@
   color: var(--radix-gray-12);
 }
 
+.selectItemDisabled {
+  color: var(--radix-gray-8);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .selectItemIndicator {
   position: absolute;
   left: 0;
@@ -203,6 +210,11 @@
 [data-theme='dark'] .selectItemSelected {
   background-color: var(--radix-gray-4);
   color: var(--radix-gray-12);
+}
+
+[data-theme='dark'] .selectItemDisabled {
+  color: var(--radix-gray-8);
+  opacity: 0.5;
 }
 
 [data-theme='dark'] .selectItemIndicator {

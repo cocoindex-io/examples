@@ -5,6 +5,11 @@ import { IoCheckmark } from 'react-icons/io5';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+const options = [
+  { value: 'v0', label: 'v0', disabled: false },
+  { value: 'v1', label: 'v1-preview', disabled: true },
+];
+
 export default function VersionSelector(): React.ReactElement {
   const location = useLocation();
   const [currentVersion, setCurrentVersion] = useState<string>('v0');
@@ -48,12 +53,13 @@ export default function VersionSelector(): React.ReactElement {
         triggerRef.current?.focus();
       } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         event.preventDefault();
-        const options = ['v0', 'v1'];
-        const currentIndex = options.indexOf(currentVersion);
+        const enabledOptions = options.filter(opt => !opt.disabled);
+        const enabledValues = enabledOptions.map(opt => opt.value);
+        const currentIndex = enabledValues.indexOf(currentVersion);
         const nextIndex = event.key === 'ArrowDown' 
-          ? (currentIndex + 1) % options.length
-          : (currentIndex - 1 + options.length) % options.length;
-        const newValue = options[nextIndex];
+          ? (currentIndex + 1) % enabledValues.length
+          : (currentIndex - 1 + enabledValues.length) % enabledValues.length;
+        const newValue = enabledValues[nextIndex];
         
         // Handle version change inline to avoid dependency issues
         if (newValue === currentVersion) {
@@ -61,18 +67,12 @@ export default function VersionSelector(): React.ReactElement {
           return;
         }
 
-        let newPath = location.pathname;
+        let newPath = '';
         if (newValue === 'v0') {
-          if (newPath.includes('/examples')) {
-            newPath = newPath.replace(/\/examples-v\d+/, '/examples');
-          } else if (newPath.includes('/docs')) {
-            newPath = newPath.replace(/\/docs-v\d+/, '/docs');
-          }
-        } else if (newValue === 'v1') {
-          if (newPath.includes('/examples')) {
-            newPath = newPath.replace(/\/examples(-v\d+)?/, '/examples-v1');
-          } else if (newPath.includes('/docs')) {
-            newPath = newPath.replace(/\/docs(-v\d+)?/, '/docs-v1');
+          if (location.pathname.includes('/examples')) {
+            newPath = '/examples';
+          } else if (location.pathname.includes('/docs')) {
+            newPath = '/docs';
           }
         }
         
@@ -88,49 +88,35 @@ export default function VersionSelector(): React.ReactElement {
   }, [isOpen, currentVersion, location.pathname]);
 
   const handleVersionChange = (value: string) => {
+    // Check if the option is disabled
+    const option = options.find(opt => opt.value === value);
+    if (option?.disabled) {
+      return; // Don't allow clicking on disabled options
+    }
+
     if (value === currentVersion) {
       setIsOpen(false);
       return;
     }
 
-    let newPath = location.pathname;
+    let newPath = '';
 
     // Handle v0 selection
     if (value === 'v0') {
-      // If URL contains /examples (with or without version), change to /examples
-      if (newPath.includes('/examples')) {
-        // Remove version suffix if present, preserve rest of path
-        newPath = newPath.replace(/\/examples-v\d+/, '/examples');
+      // If URL contains /examples (with or without version), go to /examples base path
+      if (location.pathname.includes('/examples')) {
+        newPath = '/examples';
       }
-      // If URL contains /docs (with or without version), change to /docs
-      else if (newPath.includes('/docs')) {
-        // Remove version suffix if present, preserve rest of path
-        newPath = newPath.replace(/\/docs-v\d+/, '/docs');
-      }
-    }
-    // Handle v1 selection
-    else if (value === 'v1') {
-      // If URL contains /examples (with or without version), change to /examples-v1
-      if (newPath.includes('/examples')) {
-        // Replace /examples or /examples-v0 with /examples-v1, preserve rest of path
-        newPath = newPath.replace(/\/examples(-v\d+)?/, '/examples-v1');
-      }
-      // If URL contains /docs (with or without version), change to /docs-v1
-      else if (newPath.includes('/docs')) {
-        // Replace /docs or /docs-v0 with /docs-v1, preserve rest of path
-        newPath = newPath.replace(/\/docs(-v\d+)?/, '/docs-v1');
+      // If URL contains /docs (with or without version), go to /docs base path
+      else if (location.pathname.includes('/docs')) {
+        newPath = '/docs';
       }
     }
 
     setIsOpen(false);
-    // Navigate to new path
+    // Navigate to new path (base path only, no sub-paths preserved)
     window.location.href = newPath;
   };
-
-  const options = [
-    { value: 'v0', label: 'v0' },
-    { value: 'v1', label: 'v1-preview' },
-  ];
 
   // Get the current label based on the selected value
   const currentLabel = options.find(opt => opt.value === currentVersion)?.label || currentVersion;
@@ -160,11 +146,13 @@ export default function VersionSelector(): React.ReactElement {
                 key={option.value}
                 className={clsx(
                   styles.selectItem,
-                  currentVersion === option.value && styles.selectItemSelected
+                  currentVersion === option.value && styles.selectItemSelected,
+                  option.disabled && styles.selectItemDisabled
                 )}
-                onClick={() => handleVersionChange(option.value)}
+                onClick={() => !option.disabled && handleVersionChange(option.value)}
                 role="option"
                 aria-selected={currentVersion === option.value}
+                aria-disabled={option.disabled}
               >
                 {currentVersion === option.value && (
                   <span className={styles.selectItemIndicator}>
