@@ -9,6 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import {FaBars} from 'react-icons/fa';
 import GitHubStar from '../../components/GitHubStar';
+import VersionSelector from '../../components/VersionSelector';
 import type {Props as NavbarItemConfig} from '@theme/NavbarItem';
 import styles from './styles.module.css';
 
@@ -48,6 +49,9 @@ export default function Navbar(): React.ReactElement {
 
         <div className={styles.navbarItemsRight}>
           {rightItems.map((item, i) => <NavbarItem {...(item as NavbarItemConfig)} key={i} />)}
+          <div className={styles.versionSelectorWrapper}>
+            <VersionSelector />
+          </div>
           <div className={styles.githubStarWrapper}>
             <GitHubStar />
           </div>

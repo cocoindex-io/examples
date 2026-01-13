@@ -1,0 +1,33 @@
+.versionSelector {
+  display: inline-block;
+}
+
+.select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.375rem;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.select:hover {
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px var(--ifm-color-primary-alpha-20);
+}
+
+[data-theme='dark'] .select {
+  border-color: var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .select:hover {
+  border-color: var(--ifm-color-emphasis-300);
+}
