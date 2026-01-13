@@ -129,8 +129,11 @@ export default function VersionSelector(): React.ReactElement {
 
   const options = [
     { value: 'v0', label: 'v0' },
-    { value: 'v1', label: 'v1' },
+    { value: 'v1', label: 'v1-preview' },
   ];
+
+  // Get the current label based on the selected value
+  const currentLabel = options.find(opt => opt.value === currentVersion)?.label || currentVersion;
 
   return (
     <div className={styles.selectRoot} ref={selectRef}>
@@ -144,7 +147,7 @@ export default function VersionSelector(): React.ReactElement {
         aria-label="Select version"
         data-state={isOpen ? 'open' : 'closed'}
       >
-        <span className={styles.selectValue}>{currentVersion}</span>
+        <span className={styles.selectValue}>{currentLabel}</span>
         <span className={clsx(styles.selectIcon, isOpen && styles.selectIconOpen)}>
           <FaChevronDown />
         </span>
