@@ -18,6 +18,7 @@ export default function Navbar(): React.ReactElement {
   const {colorMode} = useColorMode();
   const {navbar: {items, logo, title}} = useThemeConfig();
   const logoSrc = colorMode === 'dark' ? 'img/logo-dark.svg' : 'img/logo.svg';
+  const iconSrc = 'img/icon.svg';
   const leftItems = items.filter(item => item.position === 'left');
   const rightItems = items.filter(item => item.position === 'right');
 
@@ -38,6 +39,11 @@ export default function Navbar(): React.ReactElement {
             <img
               className={styles.navbarLogo}
               src={useBaseUrl(logoSrc)}
+              alt={logo?.alt || title}
+            />
+            <img
+              className={styles.navbarIcon}
+              src={useBaseUrl(iconSrc)}
               alt={logo?.alt || title}
             />
           </Link>

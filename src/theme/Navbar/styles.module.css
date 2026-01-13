@@ -44,6 +44,12 @@
   width: auto;
 }
 
+.navbarIcon {
+  display: none;
+  height: 32px;
+  width: auto;
+}
+
 .navbarTitle {
   display: none;
 }
@@ -146,6 +152,10 @@
   color: var(--navbar-link-color, #1f2328);
 }
 
+.navbarMobileMenuButtonHidden {
+  display: none !important;
+}
+
 /* Mobile styles */
 @media (max-width: 996px) {
   .navbarContainer {
@@ -190,8 +200,12 @@
     margin-right: 12px;
   }
 
-  .navbarMobileMenuButtonHidden {
-    display: none !important;
+  .navbarLogo {
+    display: none;
+  }
+
+  .navbarIcon {
+    display: block;
   }
 }
 
