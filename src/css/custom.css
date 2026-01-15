@@ -16,6 +16,7 @@
 /* Import Radix UI color system */
 @import '../components/Color/colors.css';
 
+
 /* You can override the default Infima variables here. */
 :root {
   /* Iris color scheme from Radix UI */
