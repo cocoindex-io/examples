@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   build:
+    environment: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,6 +42,11 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build website
+        env:
+          COCOINDEX_DOCS_POSTHOG_API_KEY: ${{ vars.COCOINDEX_DOCS_POSTHOG_API_KEY }}
+          COCOINDEX_DOCS_MIXPANEL_API_KEY: ${{ vars.COCOINDEX_DOCS_MIXPANEL_API_KEY }}
+          COCOINDEX_DOCS_ALGOLIA_APP_ID: ${{ vars.COCOINDEX_DOCS_ALGOLIA_APP_ID }}
+          COCOINDEX_DOCS_ALGOLIA_API_KEY: ${{ vars.COCOINDEX_DOCS_ALGOLIA_API_KEY }}
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
