@@ -14,6 +14,14 @@
   padding: 0;
 }
 
+/* Narrower sidebar on lg screens */
+@media (min-width: 997px) and (max-width: 1200px) {
+  .theme-doc-sidebar-container,
+  [class*='docSidebarContainer'] {
+    --doc-sidebar-width: 240px;
+  }
+}
+
 /* Sidebar menu items with generous spacing */
 .theme-doc-sidebar-menu .menu__list {
   padding: 0;
