@@ -2,7 +2,7 @@
  * Radix UI Color System
  * Centralized color variables for all components
  * Based on Radix UI Themes color palette
- * 
+ *
  * Color scales follow Radix UI convention:
  * - 1-2: Very light backgrounds
  * - 3-5: Subtle backgrounds
@@ -175,12 +175,26 @@
   --radix-color-background: #ffffff;
   --radix-color-background-subtle: var(--radix-gray-2);
   --radix-color-background-muted: var(--radix-gray-3);
-  
-  /* Primary color (using indigo as default) */
-  --radix-color-primary: var(--radix-indigo-9);
-  --radix-color-primary-hover: var(--radix-indigo-10);
-  --radix-color-primary-active: var(--radix-indigo-11);
-  --radix-color-primary-text: var(--radix-indigo-12);
+
+  /* Primary color scale (using indigo as default) */
+  --radix-primary-1: var(--radix-indigo-1);
+  --radix-primary-2: var(--radix-indigo-2);
+  --radix-primary-3: var(--radix-indigo-3);
+  --radix-primary-4: var(--radix-indigo-4);
+  --radix-primary-5: var(--radix-indigo-5);
+  --radix-primary-6: var(--radix-indigo-6);
+  --radix-primary-7: var(--radix-indigo-7);
+  --radix-primary-8: var(--radix-indigo-8);
+  --radix-primary-9: var(--radix-indigo-9);
+  --radix-primary-10: var(--radix-indigo-10);
+  --radix-primary-11: var(--radix-indigo-11);
+  --radix-primary-12: var(--radix-indigo-12);
+
+  /* Legacy semantic aliases */
+  --radix-color-primary: var(--radix-primary-9);
+  --radix-color-primary-hover: var(--radix-primary-10);
+  --radix-color-primary-active: var(--radix-primary-11);
+  --radix-color-primary-text: var(--radix-primary-12);
 }
 
 /* Dark mode colors */
@@ -348,11 +362,24 @@ html[data-theme='dark'] {
   --radix-color-background: #111827;
   --radix-color-background-subtle: var(--radix-gray-2);
   --radix-color-background-muted: var(--radix-gray-3);
-  
-  /* Primary color (using indigo as default) */
-  --radix-color-primary: var(--radix-indigo-9);
-  --radix-color-primary-hover: var(--radix-indigo-10);
-  --radix-color-primary-active: var(--radix-indigo-11);
-  --radix-color-primary-text: var(--radix-indigo-12);
-}
 
+  /* Primary color scale (using indigo as default) */
+  --radix-primary-1: var(--radix-indigo-1);
+  --radix-primary-2: var(--radix-indigo-2);
+  --radix-primary-3: var(--radix-indigo-3);
+  --radix-primary-4: var(--radix-indigo-4);
+  --radix-primary-5: var(--radix-indigo-5);
+  --radix-primary-6: var(--radix-indigo-6);
+  --radix-primary-7: var(--radix-indigo-7);
+  --radix-primary-8: var(--radix-indigo-8);
+  --radix-primary-9: var(--radix-indigo-9);
+  --radix-primary-10: var(--radix-indigo-10);
+  --radix-primary-11: var(--radix-indigo-11);
+  --radix-primary-12: var(--radix-indigo-12);
+
+  /* Legacy semantic aliases */
+  --radix-color-primary: var(--radix-primary-9);
+  --radix-color-primary-hover: var(--radix-primary-10);
+  --radix-color-primary-active: var(--radix-primary-11);
+  --radix-color-primary-text: var(--radix-primary-12);
+}
