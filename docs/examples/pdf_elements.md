@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [vector-index, multi-modal]
 image: /img/examples/pdf_elements/cover.png
 tags: [vector-index, multi-modal]
-last_reviewed: 2026-01-09
+last_reviewed: 2026-01-18
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/ActionButtons';

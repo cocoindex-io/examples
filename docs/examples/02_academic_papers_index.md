@@ -9,7 +9,7 @@ sidebar_custom_props:
   tags: [vector-index, metadata]
 image: /img/examples/academic_papers_index/cover.png
 tags: [vector-index, metadata]
-last_reviewed: 2026-01-09
+last_reviewed: 2026-01-18
 ---
 
 import { GitHubButton, YouTubeButton, DocumentationButton } from '@site/src/components/ActionButtons';

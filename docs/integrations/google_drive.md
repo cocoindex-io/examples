@@ -8,7 +8,7 @@ sidebar_custom_props:
   image: /img/integrations/google_drive/cover.png
   tags: [vector-index, google-drive, realtime, etl]
 image: /img/integrations/google_drive/cover.png
-last_reviewed: 2026-01-09
+last_reviewed: 2026-01-18
 ---
 import { DocumentationButton, GitHubButton } from '@site/src/components/ActionButtons';
 import { LastReviewed } from '@site/src/components/LastReviewed';
