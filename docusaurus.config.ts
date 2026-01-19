@@ -97,15 +97,15 @@ const config: Config = {
       },
       items: [
         {
-          label: 'Documentation',
-          to: 'https://cocoindex.io/docs/',
-          target: '_self',
-          position: 'left',
-        },
-        {
           label: 'Examples',
           type: 'doc',
           docId: 'index',
+          position: 'left',
+        },
+        {
+          label: 'Documentation',
+          to: 'https://cocoindex.io/docs/',
+          target: '_self',
           position: 'left',
         },
         { to: 'https://cocoindex.io/blogs/', label: 'Blog', position: 'left', target: '_self' },
