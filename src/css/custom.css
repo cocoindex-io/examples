@@ -4,6 +4,12 @@
  * work well for content-centric websites.
  */
 
+/* Critical navbar styles - loaded first to prevent layout shift */
+.navbar__items--left {
+  flex: 1 !important;
+  justify-content: center !important;
+}
+
 /* Import Questrial font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
