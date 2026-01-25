@@ -39,6 +39,11 @@
 @import './table.css';
 
 
+/* Prevent horizontal scrollbar */
+html, body {
+  overflow-x: hidden;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   /* Iris color scheme from Radix UI */
